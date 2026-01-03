@@ -3,103 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechStart - Innovative Solutions</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="logo">TechStart</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Welcome to the Future</h1>
-            <p>Transform your business with cutting-edge technology solutions</p>
-            <button class="cta-button">Get Started</button>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <h2 class="section-title">Our Features</h2>
-        <div class="features-container">
-            <div class="feature-box">
-                <div class="icon">🚀</div>
-                <h3>Fast Performance</h3>
-                <p>Lightning-fast solutions that boost your productivity and efficiency</p>
+    <div class="container">
+        <h1>Temperature Converter</h1>
+        
+        <div class="converter-box">
+            <div class="input-group">
+                <label for="temperature">Enter Temperature:</label>
+                <input 
+                    type="text" 
+                    id="temperature" 
+                    placeholder="Enter a number"
+                    autocomplete="off">
+                <span class="error-message" id="error"></span>
             </div>
-            <div class="feature-box">
-                <div class="icon">🔒</div>
-                <h3>Secure Platform</h3>
-                <p>Enterprise-grade security to protect your valuable data</p>
+
+            <div class="input-group">
+                <label>Select Unit:</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="unit" value="celsius" checked>
+                        <span>Celsius (°C)</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="unit" value="fahrenheit">
+                        <span>Fahrenheit (°F)</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="unit" value="kelvin">
+                        <span>Kelvin (K)</span>
+                    </label>
+                </div>
             </div>
-            <div class="feature-box">
-                <div class="icon">💡</div>
-                <h3>Smart Innovation</h3>
-                <p>Innovative features that keep you ahead of the competition</p>
+
+            <button id="convertBtn" class="convert-btn">Convert</button>
+
+            <div class="result-area" id="resultArea">
+                <h2>Converted Temperatures:</h2>
+                <div class="result-grid" id="results"></div>
             </div>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="about-container">
-            <div class="about-image">
-                <div class="placeholder-image">Image</div>
-            </div>
-            <div class="about-text">
-                <h2>About Our Company</h2>
-                <p>We are dedicated to providing innovative technology solutions that empower businesses to thrive in the digital age. With years of experience and a passionate team, we deliver excellence in every project.</p>
-                <p>Our commitment to quality and customer satisfaction has made us a trusted partner for companies worldwide.</p>
-            </div>
-        </div>
-    </section>
+        <footer>
+            <p>Pratiksha Kassa</p>
+        </footer>
+    </div>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit" class="submit-button">Send Message</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>TechStart</h3>
-                <p>Innovating for tomorrow</p>
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#about">About</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <p>Email: info@techstart.com</p>
-                <p>Phone: (555) 123-4567</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 TechStart. All rights reserved.</p>
-        </div>
-    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
